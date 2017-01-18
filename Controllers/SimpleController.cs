@@ -17,7 +17,7 @@ namespace BootstrappingMVC.Controllers
                 FirstName = "James",
                 LastName = "Buchanon",
                 BirthDate = new DateTime(1990, 6, 1),
-                LikesMusic = true,
+                LikesMusic = false,
                 Skills = new List<string>() { "Math", "Science", "History"}
             };
 
