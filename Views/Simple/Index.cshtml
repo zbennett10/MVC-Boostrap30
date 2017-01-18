@@ -1,7 +1,37 @@
-﻿
+﻿@model BootstrappingMVC.Models.Person
+
+
 @{
     ViewBag.Title = "Index";
+    var likesMusic = Model.LikesMusic ? "active" : null;
+    var notAMusicFan = !Model.LikesMusic ? "active" : null;
 }
 
-<h2>Index</h2>
+<div class="jumbotron">
+    <h1>ASP.NET MVC Website</h1>
+</div>
 
+<div>
+    <h3>@Model.FirstName @Model.LastName</h3>
+    <p>@Model.FirstName was born on @Model.BirthDate.ToString("D")</p>
+    <p>
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-success btn-sm @likesMusic">
+                <input type="radio" name="options" id="option1" /> Likes Music
+            </label>
+            <label class="btn btn-success btn-sm @notAMusicFan">
+                <input type="radio" name="options" id="option2" /> Doesn't Like Music
+            </label>
+        </div>
+    </p>
+</div>
+
+@{ 
+    ViewBag.ListDescription = "Skills:";
+    Html.RenderPartial("_Skills", Model.Skills);
+}
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
