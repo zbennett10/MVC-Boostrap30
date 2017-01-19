@@ -269,7 +269,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Simple\Index.cshtml" />
     <Content Include="Views\Simple\_Skills.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\Boolean.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\BooleanButtonLabel.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\BooleanButtonLabel.cshtml" />
+    <Content Include="Views\Simple\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
